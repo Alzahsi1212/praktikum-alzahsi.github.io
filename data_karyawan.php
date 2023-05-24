@@ -29,7 +29,9 @@
                 <tr>
                     <td><?php echo $nomor++; ?></td>
                     <td><?php echo $kolomData['nik']; ?></td>
-                    <td><?php echo $kolomData['nama']; ?></td>
+                    <td><a href="detail_karyawan.php?nik=<?php echo $kolomData['nik']; ?>">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    <?php echo $kolomData['nama'] ?></a></td>
                     <td><?php echo $kolomData['tempat_lahir']; ?></td>
                     <td><?php echo date('d-m-Y', strtotime($kolomData['tanggal_lahir'])); ?></td>
                     <td><?php echo $kolomData['no_telepon']; ?></td>

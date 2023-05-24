@@ -25,8 +25,9 @@ if ($result && mysqli_num_rows($result) > 0) {
     $user = mysqli_fetch_assoc($result);
     // Memeriksa kesesuaian password
     if (md5($password) == $user['password']) {
-        // Login berhasil, simpan username dalam session
+        // Login berhasil, simpan username dan nama dalam session
         $_SESSION['username'] = $username;
+        $_SESSION['nama'] = $user['nama'];
 
         // Jika checkbox "Ingat Saya" dicentang, simpan informasi login dalam cookie
         if (isset($_POST['remember']) && $_POST['remember'] == '1') {
@@ -42,7 +43,7 @@ if ($result && mysqli_num_rows($result) > 0) {
             }
         }
 
-        header("Location: index.php");
+        header("Location: admin.php");
         exit;
     }
 }

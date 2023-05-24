@@ -40,6 +40,7 @@ if(isset($_POST['add'])) {
 
 }
 ?>
+<div class="container" style="margin: 0 auto;">
  <h2>Data Karyawan &raquo; Tambah Data</h2>
     <hr>
     <form action="" method="POST" class="form-horizontal">
@@ -117,5 +118,5 @@ if(isset($_POST['add'])) {
             </div>
         </div>
     </form>
-
+</div>
 <?php include "footer.php"; ?>
