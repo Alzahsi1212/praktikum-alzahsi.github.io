@@ -33,7 +33,7 @@
                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                     <?php echo $kolomData['nama'] ?></a></td>
                     <td><?php echo $kolomData['tempat_lahir']; ?></td>
-                    <td><?php echo date('d-m-Y', strtotime($kolomData['tanggal_lahir'])); ?></td>
+                    <td><?php echo indonesia2Tgl($kolomData['tanggal_lahir']); ?></td>
                     <td><?php echo $kolomData['no_telepon']; ?></td>
                     <td><?php echo $kolomData['jabatan']; ?></td>
                     <td><?php echo $kolomData['status']; ?></td>

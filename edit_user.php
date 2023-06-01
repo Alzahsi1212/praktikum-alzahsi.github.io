@@ -1,4 +1,4 @@
-<?php include "header-admin.php"; ?>
+<?php include "header.php"; ?>
 <?php
 $user = $_GET['username'];
 $sql = mysqli_query($koneksi, "SELECT * FROM tuser WHERE username='$user' ");

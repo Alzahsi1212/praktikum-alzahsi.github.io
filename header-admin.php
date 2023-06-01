@@ -57,11 +57,13 @@
                     <li><a href="#">Master Data</a>
                     <ul>
                     <li><a href="data_karyawan.php">Data Karyawan</a></li>
+                    <li><a href="absenhari_data.php">Absensi</a></li>
                     </ul>
                     </li>
                     <li><a href="#">Laporan</a>
                     <ul>
                         <li><a href="cetak_karyawan.php">Cetak Data Karyawan</a></li>
+                        <li><a href="cetak_absensi.php">Cetak Absensi Karyawan</a></li>
                     </ul>
                     </li>
                     <li><a href="#">Admin</a>

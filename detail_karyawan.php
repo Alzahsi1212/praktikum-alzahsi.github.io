@@ -1,4 +1,5 @@
 <?php include "header.php"; ?>
+<div class="container" style="margin: 0 auto;">
 <h2>Data Karyawan &raquo; Biodata</h2>
 <hr>
 <?php
@@ -69,4 +70,5 @@
 <a href="delete_karyawan.php?aksi=delete&nik=<?php echo $row['nik']; ?>" class="btn btn-sm btn-danger">
 <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Hapus Data</a>
 
+</div>
 <?php include "footer.php"; ?>

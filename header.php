@@ -48,37 +48,50 @@
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
         <div class="content">
             <nav class="navbar navbar-inverse">
-            <div id="navbar">
-                <ul class="dropDownMenu">
-                    <li><a href="./">Beranda</a></li>
-                    <li><a href="#">Master Data</a>
-                    <ul>
-                    <li><a href="data_karyawan.php">Data Karyawan</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="#">Laporan</a>
-                    <ul>
-                        <li><a href="cetak_karyawan.php">Cetak Data Karyawan</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="tentang-saya.php">Tentang Saya</a></li>
-                    <ul class="dropDownMenu navbar-right">
-                    <?php if ($username != '') : ?>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <?php echo $namaPengguna; ?><span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="logout.php">Logout</a></li>
+                <div id="navbar">
+                    <ul class="dropDownMenu">
+                        <li><a href="./">Beranda</a></li>
+                        <?php if ($username != '') : ?>
+                            <li>
+                                <a href="#">Master Data</a>
+                                <ul>
+                                    <li><a href="data_karyawan.php">Data Karyawan</a></li>
+                                    <li><a href="absenhari_data.php">Absensi</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Admin</a>
+                                <ul>
+                                    <li><a href="create_user.php">Buat User</a></li>
+                                    <li><a href="data_user.php">Data User</a></li>
+                                </ul>
+                            </li>
+                        <?php endif; ?>
+                            <li>
+                                <a href="#">Laporan</a>
+                                <ul>
+                                    <li><a href="cetak_karyawan.php">Cetak Data Karyawan</a></li>
+                                    <li><a href="cetak_absensi.php">Cetak Absensi Karyawan</a></li>
+                                </ul>
+                            </li>
+                        <li><a href="tentang-saya.php">Tentang Saya</a></li>
+                        <ul class="dropDownMenu navbar-right">
+                            <?php if ($username != '') : ?>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <?php echo $namaPengguna; ?><span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="logout.php">Logout</a></li>
+                                    </ul>
+                                </li>
+                            <?php else : ?>
+                                <li><a href="login.html">Login</a></li>
+                            <?php endif; ?>
+                        </ul>
                             </ul>
-                        </li>
-                    <?php else : ?>
-                        <li><a href="login.html">Login</a></li>
-                    <?php endif; ?>
-                </ul>
-                </ul>
             </div>
             </nav>
         </div>

@@ -1,5 +1,5 @@
 <?php
-    include "header-admin.php";
+    include "header.php";
 ?>
 
 <div class="container" style="margin: 0 auto;">
