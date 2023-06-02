@@ -1,4 +1,7 @@
-<?php include "header.php"; ?>
+<?php
+ob_start(); // Memulai output buffering
+include "header.php";
+?>
 <div class="container" style="margin: 0 auto;">
     <h2>Proses Absen Harian &raquo; Edit Data</h2>
     <hr>
@@ -112,4 +115,7 @@
         </div>
     </form>
 </div>
-<?php include "footer.php"; ?>
+<?php
+ob_end_flush(); // Mengakhiri dan mengirimkan output buffering
+include "footer.php";
+?>

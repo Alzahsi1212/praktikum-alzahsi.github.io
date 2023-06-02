@@ -15,7 +15,7 @@ if (mysqli_num_rows($sql) == 0) {
 //Proses simpan Data
 if (isset($_POST['update'])) {
     $user   = $_POST['username'];
-    $pass   = $_POST['password'];
+    $pass   = md5($_POST['password']);
     $nama   = $_POST['nama'];
     $email  = $_POST['email'];
 
@@ -24,14 +24,14 @@ if (isset($_POST['update'])) {
 ?>
         <div class="alert alert-success alert-dismissable">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            User berhasil diUpdate.
+            User berhasil diupdate.<a href="data_user.php">Kembali ke halaman data user.</a>
         </div>
 <?php
     } else {
 ?>
         <div class="alert alert-danger alert-dismissable">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            User gagal diUpdate, silahkan coba lagi.
+            User gagal diupdate, silahkan coba lagi.
         </div>
 <?php
     }
@@ -50,7 +50,7 @@ if (isset($_POST['update'])) {
     <div class="form-group">
         <label class="col-sm-3 control-label">Password</label>
         <div class="col-sm-4">
-            <input type="text" name="password" value="<?php echo $row['password']; ?>" class="form-control" placeholder="Password" required>
+            <input type="password" name="password" value="<?php echo $row['password']; ?>" class="form-control" placeholder="Password" required>
         </div>
     </div>
     <div class="form-group">
