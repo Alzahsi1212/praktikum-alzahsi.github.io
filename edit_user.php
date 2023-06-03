@@ -19,7 +19,8 @@ if (isset($_POST['update'])) {
     $nama   = $_POST['nama'];
     $email  = $_POST['email'];
 
-    $update = mysqli_query($koneksi, "UPDATE tuser SET nama='$nama', password='$pass', email='$email' WHERE username='$user'") or die(mysqli_error($koneksi));
+    $update = mysqli_query($koneksi, "UPDATE tuser SET nama='$nama', password='$pass',
+     email='$email' WHERE username='$user'") or die(mysqli_error($koneksi));
     if ($update) {
 ?>
         <div class="alert alert-success alert-dismissable">
